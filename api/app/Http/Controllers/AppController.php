@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 
 class AppController extends Controller
 {
+    /**
+     * Returns the api version number - the front page...
+     *
+     * @return JsonResponse
+     */
     public function version(): JsonResponse
     {
         return response()->json([
@@ -16,6 +20,11 @@ class AppController extends Controller
         ]);
     }
 
+    /**
+     * Redirect users from raw domain to /api
+     *
+     * @return RedirectResponse
+     */
     public function web() : RedirectResponse
     {
         return redirect('api');

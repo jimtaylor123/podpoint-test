@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Unit;
 use App\Charge;
 use App\Http\Resources\UnitResource;
@@ -13,6 +12,13 @@ use App\Http\Requests\ChargeUpdate;
 
 class ChargeController extends Controller
 {
+    /**
+     * Create a new charge for a unit
+     *
+     * @param ChargeStore $request
+     * @param Unit $unit
+     * @return JsonResponse
+     */
     public function store(ChargeStore $request, Unit $unit) : JsonResponse
     {
         $charge = (new Charge())->create([
@@ -27,6 +33,16 @@ class ChargeController extends Controller
             ->setStatusCode(Response::HTTP_CREATED);
     }
 
+    /**
+     * Update a charge, i.e. stop it. 
+     * However, in future we may wish to add extra functionality here... 
+     * 'pause' a charge? 
+     *
+     * @param ChargeUpdate $request
+     * @param Unit $unit
+     * @param Charge $charge
+     * @return JsonResponse
+     */
     public function update(ChargeUpdate $request, Unit $unit, Charge $charge) : JsonResponse
     {
         $charge->update(['end' => now()]);
