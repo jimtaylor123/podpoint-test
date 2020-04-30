@@ -13,6 +13,6 @@ class UnitsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Unit::class, 10)->create();
+        factory(Unit::class, 10)->create(['status' => 'available']);
     }
 }

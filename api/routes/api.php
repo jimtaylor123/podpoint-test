@@ -14,3 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', 'AppController@version');
+Route::get('units', 'UnitController@index');
+Route::get('units/{unit}', 'UnitController@show');
+Route::post('units/{unit}', 'ChargeController@store');
+Route::patch('units/{unit}/charges/{charge}', 'ChargeController@update');
