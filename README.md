@@ -102,14 +102,13 @@ The test is split into 2 sections presenting the need for back end & front end:
 <a id="about-you"></a>
 ## About you
 
-* **First name:** `{your first name here}`
-* **Last name:** `{your last name here}`
+* **First name:** `Jim`
+* **Last name:** `Taylor`
 
 
 <a id="your-comments"></a>
 ### Your comments (optional)
 
-> ***NOTE: If you have any comments, please write them down in this section.***
 
 ***
 
