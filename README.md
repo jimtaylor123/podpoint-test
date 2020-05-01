@@ -115,7 +115,7 @@ Hi, I completed the test over two days (Thursday and Friday) while I had a range
 1. I have hosted the work on digital ocean, here are the links:
    * The app: http://178.62.72.14:8080/
    * The api: http://178.62.72.14:8000/api
-2. The setup information is in the setup.md file in the root of the repo, along with the commands to run tests
+2. The setup information is in the [set up file](./docs/setup.md) file in the root of the repo, along with the commands to run tests
 3. As you will see I have used Laravel, Vue and Tailwind. 
 
 ***
