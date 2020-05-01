@@ -39,6 +39,11 @@ mysql -e "FLUSH PRIVILEGES;"
 # ------------------------------------------------
 composer install --no-interaction
 
+composer dump
+php artisan cache:clear
+php artisan migrate
+php artisan db:seed 
+
 # ------------------------------------------------
 # Restart Apache service
 # ------------------------------------------------

@@ -10,13 +10,14 @@ Hi and welcome to our coding test for joining the Pod Point Software Team!
 
 **Table of Contents**
 
-* [Presentation](#presentation)
-* [Prerequisites](#prerequisites)
-* [About your implementation](#about-your-implementation)
-* [Your dev environment](#your-dev-environment)
-* [The task](#the-task)
-* [About you](#about-you)
-    * [Your comments](#your-comments) (optional)
+- [Pod Point - Full stack coding test](#pod-point---full-stack-coding-test)
+  - [Presentation](#presentation)
+  - [Prerequisites](#prerequisites)
+  - [About your implementation](#about-your-implementation)
+  - [Your dev environment](#your-dev-environment)
+  - [The task](#the-task)
+  - [About you](#about-you)
+    - [Your comments (optional)](#your-comments-optional)
 
 ***
 
@@ -109,6 +110,13 @@ The test is split into 2 sections presenting the need for back end & front end:
 <a id="your-comments"></a>
 ### Your comments (optional)
 
+Hi, I completed the test over two days (Thursday and Friday) while I had a range of other things going on. 
+
+1. I have hosted the work on digital ocean, here are the links:
+   * The app: http://178.62.72.14:8080/
+   * The api: http://178.62.72.14:8000/api
+2. The setup information is in the setup.md file in the root of the repo, along with the commands to run tests
+3. As you will see I have used Laravel, Vue and Tailwind. 
 
 ***
 

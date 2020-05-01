@@ -24,7 +24,7 @@ service mysql stop
 # Prepare App
 # ------------------------------------------------
 npm install
-npm run start
+npm run build
 
 # ------------------------------------------------
 # Restart Apache service
