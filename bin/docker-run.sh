@@ -75,8 +75,8 @@ docker pull swaggerapi/swagger-ui
 docker run -d --name podpoint-api \
     -p 8000:80 \
     -w / \
-    -v ${PROJECT_DIR}/bin/apache/000-default.conf:/etc/apache2/sites-available/000-default.conf \
-    -v ${PROJECT_DIR}/bin/apache/default-ssl.conf:/etc/apache2/sites-available/default-ssl.conf \
+    -v ${PROJECT_DIR}/bin/apache/api/000-default.conf:/etc/apache2/sites-available/000-default.conf \
+    -v ${PROJECT_DIR}/bin/apache/api/default-ssl.conf:/etc/apache2/sites-available/default-ssl.conf \
     -w /var/www/html/ \
     -v ${API_BOOTSTRAP_SCRIPT_PATH}:/bin/dev-start-api.sh \
     -v ${PROJECT_DIR}/api:/var/www/html/ \
@@ -92,7 +92,10 @@ docker run -d --name podpoint-api-docs \
 # Front end
 docker run -d --name podpoint-front \
     -p 8080:80 \
+    -w / \
+    -v ${PROJECT_DIR}/bin/apache/front/000-default.conf:/etc/apache2/sites-available/000-default.conf \
+    -v ${PROJECT_DIR}/bin/apache/front/default-ssl.conf:/etc/apache2/sites-available/default-ssl.conf \
     -w /var/www/html/ \
     -v ${FRONT_BOOTSTRAP_SCRIPT_PATH}:/bin/dev-start-front.sh \
-    -v ${PROJECT_DIR}/front/public:/var/www/html/ \
+    -v ${PROJECT_DIR}/front:/var/www/html/ \
     -it fauria/lamp bash /bin/dev-start-front.sh
